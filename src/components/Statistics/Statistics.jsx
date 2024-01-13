@@ -4,16 +4,16 @@ function Statistics({
   good,
   neutral,
   bad,
-  countTotalFeedback,
-  countPositiveFeedbackPercentage,
+  total,
+  positivePercentage,
 }) {
   return (
     <div>
       <p className={css.p}>Good: {good}</p>
       <p className={css.p}>Neutral: {neutral}</p>
       <p className={css.p}>Bad: {bad}</p>
-      <p className={css.p}>Total: {countTotalFeedback}</p>
-      <p className={css.p}>Positive feedback: {Math.round(countPositiveFeedbackPercentage)}%</p>
+      <p className={css.p}>Total: {total}</p>
+      <p className={css.p}>Positive feedback: {positivePercentage}%</p>
     </div>
   );
 };

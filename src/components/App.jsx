@@ -16,15 +16,14 @@ export class App extends Component {
       [option]: prevState[option] + 1,
       }));
     };
-
+  
   countTotalFeedback = () => {
-  return Object.values(this.state).reduce((previousValue, option) => previousValue + option, 0);
+    return Object.values(this.state).reduce((previousValue, option) => previousValue + option, 0);
   };
   
   countPositiveFeedbackPercentage = () => {
-    Math.round(((this.state.good + this.state.neutral) / this.countTotalFeedback) * 100);
+     return Math.round(((this.state.good + this.state.neutral) / this.countTotalFeedback()) * 100);
   };
-
   
   render() {
     return (
@@ -32,7 +31,7 @@ export class App extends Component {
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={Object.keys(this.state)}
-            onLeaveFeedback={this.handleClick}
+            handleClick={this.handleClick}
           />
         </Section>
         <Section title="Statistics">
