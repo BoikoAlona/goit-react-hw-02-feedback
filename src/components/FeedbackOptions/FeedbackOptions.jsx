@@ -1,6 +1,6 @@
 import css from './FeedbackOptions.module.css';
 
-function FeedbackOptions({ handleClick, options }) {
+const FeedbackOptions = ({ handleClick, options }) => {
   return options.map(option => (
     <button className={css.button} type="button" key={option} onClick={() => handleClick(option)}>{option}</button>
   ));

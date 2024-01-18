@@ -1,12 +1,12 @@
 import css from './Statistics.module.css';
 
-function Statistics({
+const Statistics = ({
   good,
   neutral,
   bad,
   total,
   positivePercentage,
-}) {
+}) => {
   return (
     <div>
       <p className={css.p}>Good: {good}</p>
